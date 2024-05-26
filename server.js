@@ -27,6 +27,24 @@ app.get('/', (req, res) => {
     res.sendFile(__dirname + '/public/login.html');
 });
 
+app.get('/register', (req, res) => {
+    res.sendFile(__dirname + '/public/register.html');
+});
+
+app.post('/register', (req, res) => {
+    const { username, password, email } = req.body;
+    const query = `INSERT INTO Usuario (username, password, email) VALUES ('${username}', '${password}', '${email}')`;
+
+    new sql.Request().query(query, (err, result) => {
+        if (err) {
+            console.log(err);
+            res.send('Error al registrar el usuario');
+        } else {
+            res.redirect('/');
+        }
+    });
+});
+
 app.post('/login', (req, res) => {
     const { username, password } = req.body;
     const query = `SELECT * FROM Usuario WHERE username = '${username}' AND password = '${password}'`;
