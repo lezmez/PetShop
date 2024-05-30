@@ -191,3 +191,10 @@ ul li {
 .register-container a:hover {
     text-decoration: underline;
 }
+h4 {
+    color: red;
+    text-align: left;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
