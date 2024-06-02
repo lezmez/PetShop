@@ -1,6 +1,9 @@
 body {
     font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
+    background-image: url('../images/0.jpg'); 
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat; 
     margin: 0;
     padding: 0;
     display: flex;
@@ -9,57 +12,64 @@ body {
     height: 100vh;
 }
 
-.login-container, .register-container {
+.login-container, .register-container, .forgot-password-container {
     width: 300px;
     padding: 20px;
-    background-color: #fff;
+    background-color: rgba(255, 255, 255, 0.8); /* Fondo blanco semitransparente */
     box-shadow: 0 0 10px rgba(0,0,0,0.1);
     text-align: center;
     border-radius: 10px;
 }
 
-.login-container h2, .register-container h2 {
+.login-container h2, .register-container h2, .forgot-password-container h2 {
     margin-bottom: 20px;
 }
 
-.login-container form, .register-container form {
+.login-container form, .register-container form, .forgot-password-container form {
     display: flex;
     flex-direction: column;
 }
 
-.login-container label, .register-container label {
+.login-container label, .register-container label, .forgot-password-container label {
     margin-bottom: 5px;
     text-align: left;
 }
 
-.login-container input, .register-container input {
+.login-container input, .register-container input, .forgot-password-container input {
     margin-bottom: 15px;
     padding: 8px;
     border: 1px solid #ccc;
     border-radius: 5px;
 }
 
-.login-container button, .register-container button {
+.login-container button, .register-container button, .forgot-password-container button {
     padding: 10px;
     background-color: #007bff;
     color: white;
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    margin-bottom: 10px; /* Adding margin-bottom to separate buttons */
 }
 
-.login-container button:hover, .register-container button:hover {
+.login-container button:last-of-type, 
+.register-container button:last-of-type, 
+.forgot-password-container button:last-of-type {
+    margin-bottom: 0; /* Remove margin for the last button */
+}
+
+.login-container button:hover, .register-container button:hover, .forgot-password-container button:hover {
     background-color: #0056b3;
 }
 
-.login-container a, .register-container a {
+.login-container a, .register-container a, .forgot-password-container a {
     display: block;
     margin-top: 10px;
     color: #007bff;
     text-decoration: none;
 }
 
-.login-container a:hover, .register-container a:hover {
+.login-container a:hover, .register-container a:hover, .forgot-password-container a:hover {
     text-decoration: underline;
 }
 
@@ -121,6 +131,11 @@ form button {
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    margin-bottom: 10px; /* Adding margin-bottom to separate buttons */
+}
+
+form button:last-of-type {
+    margin-bottom: 0; /* Remove margin for the last button */
 }
 
 form button:hover {
@@ -137,11 +152,12 @@ ul li {
     padding: 10px;
     border-bottom: 1px solid #ccc;
 }
+
 .register-container {
     width: 300px;
     margin: 100px auto;
     padding: 20px;
-    background-color: #fff;
+    background-color: rgba(255, 255, 255, 0.8); /* Fondo blanco semitransparente */
     box-shadow: 0 0 10px rgba(0,0,0,0.1);
     text-align: center;
     border-radius: 10px;
@@ -178,10 +194,60 @@ ul li {
 .register-container a:hover {
     text-decoration: underline;
 }
+
+.forgot-password-container {
+    width: 300px;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.8); /* Fondo blanco semitransparente */
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    text-align: center;
+    border-radius: 10px;
+}
+
+.forgot-password-container h2 {
+    margin-bottom: 20px;
+}
+
+.forgot-password-container form {
+    display: flex;
+    flex-direction: column;
+}
+
+.forgot-password-container label {
+    margin-bottom: 5px;
+    text-align: left;
+}
+
+.forgot-password-container input {
+    margin-bottom: 15px;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.forgot-password-container button {
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 10px; /* Adding margin-bottom to separate buttons */
+}
+
+.forgot-password-container button:last-of-type {
+    margin-bottom: 0; /* Remove margin for the last button */
+}
+
+.forgot-password-container button:hover {
+    background-color: #0056b3;
+}
+
 h4 {
     color: red;
     text-align: left;
 }
+
 footer {
     text-align: center;
     color: #fff;
