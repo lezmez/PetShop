@@ -168,19 +168,6 @@ ul li {
     border-radius: 5px;
 }
 
-.register-container button {
-    padding: 10px;
-    background-color: #007bff;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-.register-container button:hover {
-    background-color: #0056b3;
-}
-
 .register-container a {
     display: block;
     margin-top: 10px;
@@ -194,7 +181,18 @@ ul li {
 h4 {
     color: red;
     text-align: left;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
+}
+footer {
+    text-align: center;
+    color: #fff;
+    padding: 10px 0;
+    background-color: #000000;
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    box-shadow: 0 -1px 10px rgb(13, 70, 214);
+}
+
+footer p {
+    margin: 0;
 }
